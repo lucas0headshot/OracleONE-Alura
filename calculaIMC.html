@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcular IMC</title>
+</head>
+<body>
+    <script> //JS :D
+        function calculaIMC(nome, peso, altura){
+            var IMC = peso / (altura * altura);
+            var faixa = "";
+
+            if (IMC < 18.5){
+                    faixa = "abaixo do recomendado!";
+            }
+
+            if (IMC > 35){
+                    faixa = "acima do recomendado!";
+            }
+
+            if (IMC >= 18.5 && IMC <= 35){
+                    faixa = "excelente!";
+            }
+
+            return (nome + ", seu IMC é " + IMC + " e você está " + faixa);
+        }
+        
+        alert(calculaIMC(prompt("Digite seu nome: "), prompt("Digite seu peso: "), prompt("Digite sua altura: ")));
+    </script>
+</body>
+</html>
