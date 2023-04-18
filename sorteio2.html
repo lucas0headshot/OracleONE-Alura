@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorteio 2.0</title>
+</head>
+<body>
+    <input type="text" id="chute" placeholder="Digite um número">
+    <button id="botao">Teste sua sorte</button>
+
+    <script>
+        var numeroSorteado = Math.round(Math.random() * intervalo);
+
+        var chute = document.querySelector("chute");
+
+        function verifica(){
+            if (chute.value == numeroSorteado){
+                alert("Você acertou!!!");
+            }else{
+                alert("Você errou!");
+            }
+        }
+
+        var botao = document.querySelector("botao");
+        botao.onclick = verifica;
+    </script>
+</body>
+</html>

@@ -8,11 +8,20 @@
 </head>
 <body>
     <script>
-        function sorteiaNumero(numero){
-            return ("Número sorteado: " + Math.round(Math.random() * numero))
-        }
+        tentativas = 3;
+        intervalo = parseInt(prompt("Digite o intervalo: "));
+        numeroSorteado = Math.round(Math.random() * intervalo);
 
-        alert(sorteiaNumero(prompt("Digite um número: ")));
+        while (tentativas != 0){
+            chute = parseInt(prompt("Digite um número: "));
+            
+            if (chute == numeroSorteado){
+                alert("Você acertou!!!");
+            }else{
+                tentativas--;
+                alert("Você errou... lhe restam " + tentativas + " tentativas");
+            }
+        }
     </script>
 </body>
 </html>
