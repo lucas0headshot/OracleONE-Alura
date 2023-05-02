@@ -94,3 +94,20 @@ main {
 form {
     margin: 40px 0;
 }
+
+form label, form p {
+    font-size: 20px;
+    display: block;
+    margin:  0 0 10px;
+}
+
+.input-padrao {
+    display: block;
+    margin: 0 0 20px;
+    padding: 10px 25px;
+    width: 50%;
+}
+
+.checkbox {
+    margin: 20px 0;
+}
