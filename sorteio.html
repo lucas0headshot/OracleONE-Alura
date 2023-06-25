@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sortear um número</title>
+</head>
+<body>
+    <script>
+        tentativas = 3;
+        intervalo = parseInt(prompt("Digite o intervalo: "));
+        numeroSorteado = Math.round(Math.random() * intervalo);
+
+        while (tentativas != 0){
+            chute = parseInt(prompt("Digite um número: "));
+            
+            if (chute == numeroSorteado){
+                alert("Você acertou!!!");
+            }else{
+                tentativas--;
+                alert("Você errou... lhe restam " + tentativas + " tentativas");
+            }
+        }
+    </script>
+</body>
+</html>
