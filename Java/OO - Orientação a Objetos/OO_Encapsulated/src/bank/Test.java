@@ -3,24 +3,25 @@ package bank;
 public class Test {
 	public static void main(String[] args) {
 		//Instancia Cliente
-		Cliente lucas = new Cliente();
-		//Define valor pros atributos do Cliente
-		lucas.nome = "Lucas Ronchi";
-		lucas.cpf = "111.111.111.11";
-		lucas.profissao = "Dev";
+		Cliente cliente = new Cliente();
+		
+		//Seta atribuitos do Cliente
+		cliente.setCpf("123.456.789-12");
+		cliente.setNome("Lucas");
+		cliente.setProfissao("Dev. FullStack");
 		
 		
 		//Instancia Conta
-		Conta contaDoLucas = new Conta();
-		contaDoLucas.deposita(1000);
+		Conta conta = new Conta();
+		conta.deposita(1000);
 		
 		//Referencia Conta.titular para o Cliente lucas
-		contaDoLucas.setTitular(lucas);
+		conta.setTitular(cliente);
 		
 		
 		
-		System.out.println("Conta: " + contaDoLucas);
-		System.out.println("Cliente: " + lucas);
-		System.out.println("Titular da conta: " + contaDoLucas.getTitular);
+		System.out.println("Conta: " + conta);
+		System.out.println("Cliente: " + cliente.getNome());
+		System.out.println("Titular da conta: " + conta.getTitular().getNome());
 	}
 }

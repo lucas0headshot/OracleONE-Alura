@@ -7,6 +7,8 @@ public class Conta {
 	private Cliente titular;
 	
 	
+	
+	//Methods
 	public void deposita(double valor) {
 		this.saldo += valor;
 	}
@@ -33,15 +35,25 @@ public class Conta {
 	}
 	
 	
+	//Getters
 	public double getSaldo() {
 		return this.saldo;
 	}
 	
-	public String getTitular() {
-		return (this.titular == null) ? "Não possui titular" : this.titular;
+	public Cliente getTitular() {
+		return this.titular;
+	}
+	
+	public int getNumero() {
+		return this.numero;
+	}
+	
+	public int getAgencia() {
+		return this.agencia;
 	}
 	
 	
+	//Setters
 	public void setNumero(int numero) {
 		this.numero = numero;
 	}
@@ -49,7 +61,6 @@ public class Conta {
 	public void setAgencia(int agencia) {
 		this.agencia = agencia;
 	}
-	
 	
 	public void setTitular(Cliente titular) {
 		this.titular = titular;
