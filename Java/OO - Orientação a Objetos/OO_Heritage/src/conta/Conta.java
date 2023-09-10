@@ -1,7 +1,7 @@
 package conta;
 
-public class Conta {
-	private double saldo;
+public abstract class Conta {
+	protected double saldo;
 	private int numero;
 	private int agencia;
 	private Cliente titular;
@@ -20,9 +20,7 @@ public class Conta {
 	
 	
 	//Methods
-	public void deposita(double valor) {
-		this.saldo += valor;
-	}
+	public abstract void deposita(double valor);
 	
 	public boolean saca(double valor) {
 		if (this.saldo >= valor) {
