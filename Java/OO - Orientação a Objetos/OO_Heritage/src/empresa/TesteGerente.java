@@ -10,5 +10,6 @@ public class TesteGerente {
 		
 		System.out.println(lucas.getNome());
 		System.out.println(lucas.autentica(123) ? "Autenticado com sucesso!" : "Autenticação falhou!");
+		System.out.println("Bonificação: " + lucas.getBonificacao());
 	}
 }
