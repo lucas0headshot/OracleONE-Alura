@@ -16,6 +16,6 @@ public class TesteSistema {
 		SistemaInterno sistemaInterno = new SistemaInterno();
 		sistemaInterno.autentica(gerente);
 		sistemaInterno.autentica(adm);
-		sistemaInterno.autentica(cliente);
+		sistemaInterno.autentica(cliente);           
 	}
 }

@@ -1,8 +1,13 @@
 package empresa;
 
 public class Administrador extends Funcionario implements Autenticavel {
-	private Integer senha;
+	private Autenticador autenticador;
 	
+	
+	
+	public Administrador() {
+		this.autenticador = new Autenticador();
+	}
 	
 	
 	@Override
@@ -12,11 +17,11 @@ public class Administrador extends Funcionario implements Autenticavel {
 	
 	@Override
 	public boolean autentica(int senha)  {
-		return this.senha.equals(senha);
+		return this.autenticador.autentica(senha);
 	}
 
 	@Override
 	public void setSenha(int senha) {
-		this.senha = senha;
+		this.autenticador.setSenha(senha);
 	}
 }

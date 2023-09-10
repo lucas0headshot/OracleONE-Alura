@@ -1,23 +1,29 @@
 package empresa;
 
 public class Gerente extends Funcionario implements Autenticavel {
-	private Integer senha;
+	private Autenticador autenticador;
 	
+	
+	
+	//Constructor
+	public Gerente() {
+		this.autenticador = new Autenticador();
+	}
 	
 	
 	//Methods
 	public double getBonificacao() {
 		return super.getSalario();
 	}
-
+	
 	
 	@Override
 	public boolean autentica(int senha)  {
-		return this.senha.equals(senha);
+		return this.autenticador.autentica(senha);
 	}
 
 	@Override
 	public void setSenha(int senha) {
-		this.senha = senha;
+		this.autenticador.setSenha(senha);
 	}
 }
