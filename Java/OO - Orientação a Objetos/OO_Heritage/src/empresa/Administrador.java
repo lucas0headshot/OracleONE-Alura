@@ -1,15 +1,14 @@
 package empresa;
 
-public class Gerente extends Funcionario implements Autenticavel {
+public class Administrador extends Funcionario implements Autenticavel {
 	private Integer senha;
 	
 	
 	
-	//Methods
+	@Override
 	public double getBonificacao() {
-		return super.getSalario();
+		return 50;
 	}
-
 	
 	@Override
 	public boolean autentica(int senha)  {

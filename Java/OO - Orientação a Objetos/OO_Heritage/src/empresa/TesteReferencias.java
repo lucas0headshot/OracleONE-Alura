@@ -2,7 +2,7 @@ package empresa;
 
 public class TesteReferencias {
 	public static void main(String[] args) {
-		Gerente gerente = new Gerente();
+		Funcionario gerente = new Gerente();
 		gerente.setNome("Lucas");
 		gerente.setSalario(1200.00);
 		
