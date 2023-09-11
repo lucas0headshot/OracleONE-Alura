@@ -1,7 +1,7 @@
 package conta;
 
 public class Test {
-	public static void main(String[] args) {
+	public static void main(String[] args) throws SaldoInsuficienteException {
 		ContaCorrente contaCorrente = new ContaCorrente(156, 651);
 		contaCorrente.deposita(100.00);
 		

@@ -1,5 +1,5 @@
 package executionStack;
 
 public class Conta {
-	void doposita() {}
+	void doposita() throws MinhaExcecao {}
 }

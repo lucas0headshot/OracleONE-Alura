@@ -13,17 +13,17 @@ public class FluxoComTratamento {
 	}
 	
 	
-    private static void metodo1() {
+    private static void metodo1() throws MinhaExcecao {
         System.out.println("Ini do metodo1");
         metodo2();
         System.out.println("Fim do metodo1");
     }
 
     
-    private static void metodo2() {
+    private static void metodo2() throws MinhaExcecao {
         System.out.println("Ini do metodo2");
         
-        throw new ArithmeticException("exceção lançada!");
+        throw new MinhaExcecao("exceção lançada!");
         
 //        System.out.println("Fim do metodo2");        
     }
