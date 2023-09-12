@@ -1,5 +1,11 @@
 package br.com.lucasbank.conta.modelo;
 
+/**
+ * Moldura de uma Conta
+ * 
+ * @author Lucas
+ * 
+ */
 public abstract class Conta {
 	protected double saldo;
 	private int numero;
@@ -9,8 +15,14 @@ public abstract class Conta {
 	
 	
 	
-	//Constructor
-	public Conta(int numero, int agencia) {
+	/** 
+	 * Constructor da classe abstrata Conta
+	 * 
+	 * @param numero
+	 * @param agencia
+	 * @throws IllegalArgumentException
+	 */
+	public Conta(int numero, int agencia) {	
 		if(numero < 1) {
 			throw new IllegalArgumentException("Número inválido!");
 		}
@@ -28,9 +40,21 @@ public abstract class Conta {
 	}
 	
 	
-	//Methods
+
+	/**
+	 * Moldura do método deposita() de uma Conta
+	 * 
+	 * @param valor
+	 */
 	public abstract void deposita(double valor);
 	
+	
+	/**
+	 * Método saca() de uma Conta
+	 * 
+	 * @param valor
+	 * @throws SaldoInsuficienteException
+	 */
 	public void saca(double valor) throws SaldoInsuficienteException {
 		if (this.saldo < valor) {
 			throw new SaldoInsuficienteException("Saldo: " + this.saldo + ", Valor: " + valor);
@@ -39,6 +63,13 @@ public abstract class Conta {
 		this.saldo -= valor;
 	}
 	
+	/**
+	 * Método transfere() de uma Conta
+	 * 
+	 * @param valor
+	 * @param destino
+	 * @throws SaldoInsuficienteException
+	 */
 	public void transfere(double valor, Conta destino) throws SaldoInsuficienteException {
 		this.saca(valor);
 		destino.deposita(valor);

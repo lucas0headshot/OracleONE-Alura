@@ -1,5 +1,10 @@
 package br.com.lucasbank.conta.modelo;
 
+/**
+ * Classe Cliente
+ * 
+ * @author Lucas
+ */
 public class Cliente {
 	private String nome;
 	private String cpf;
