@@ -76,6 +76,12 @@ public abstract class Conta {
 	}
 	
 	
+	@Override
+	public String toString() {
+		return "Número: " + this.numero +  ", Agência: " + this.agencia;
+	}
+	
+	
 	//Getters
 	public double getSaldo() {
 		return this.saldo;
