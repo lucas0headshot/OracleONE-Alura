@@ -4,4 +4,5 @@
  * @author Lucas
  */
 module OO_Heritage {
+	requires java.desktop;
 }
